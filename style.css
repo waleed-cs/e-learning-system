@@ -121,6 +121,7 @@ video {
 }
 .video__player {
   width: 100%;
+  height: auto;
 }
 .quiz1 {
   background-color: #dedede;
