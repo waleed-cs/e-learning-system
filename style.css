@@ -600,10 +600,12 @@ form > div > input[type="radio"]:checked + label::after {
     left: -110px;
     top: -72px;
   }
+
   .question1 > p::after {
     left: -60px;
     top: -18px;
   }
+
   .answers {
     left: 0;
     bottom: 0;
@@ -612,19 +614,18 @@ form > div > input[type="radio"]:checked + label::after {
     margin: 11rem auto 20rem;
     width: 100%;
   }
+
   .answers > form > div > label::before {
     left: -25px;
     top: -45%;
     transform: translateY(0%);
   }
+
   .answers > form > div > label {
     font-size: 1rem;
     width: 100%;
   }
-  .answers > form > div {
-    width: 100%;
-    background-color: lightseagreen;
-  }
+
   .submit {
     top: 0px;
     left: 0px;
