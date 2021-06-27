@@ -36,6 +36,7 @@ main {
 
 .content {
   margin: 1rem;
+  display: block;
 }
 
 .course_menu h5 {
@@ -127,7 +128,7 @@ video {
   background-color: #dedede;
   min-height: 100vh;
   width: 72vw;
-  position: relative;
+  overflow: auto;
 }
 .question1 {
   background-color: white;
@@ -135,7 +136,7 @@ video {
   border-radius: 15px;
   padding: 30px;
   font-size: 18px;
-  margin-left: 20px;
+  margin: 2rem 1rem;
 }
 .question1 > p {
   color: #60636a;
@@ -603,8 +604,7 @@ form > div > input[type="radio"]:checked + label::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    left: 20%;
+    width: fit-content;
   }
   .question1 > p {
     position: relative;
