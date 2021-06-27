@@ -124,18 +124,18 @@ const goPrevious = () => {
   });
 };
 
-setQuestionone = () => {
-  question.innerHTML =
-    "Which of the following statements is correct for a three-phase system?";
-  labels[0].innerHTML =
-    "The power delivered to a three-phase load is pulasting in nature.";
-  labels[1].innerHTML =
-    "Power per kilogram of metal from a three-phase machine is less as compared to a single-phase machine.";
-  labels[2].innerHTML = "A three-phase machine does not require a starter.";
-  labels[3].innerHTML =
-    "Mechanical vibration in three-phase motors are more as copmared to single phase motors.";
-  questionNumber.innerHTML = "Question 1 / 2";
-};
+// setQuestionone = () => {
+//   question.innerHTML =
+//     "Which of the following statements is correct for a three-phase system?";
+//   document.querySelector(".checkmark").innerHTML =
+//     "The power delivered to a three-phase load is pulasting in nature.";
+//   labels[1].innerHTML =
+//     "Power per kilogram of metal from a three-phase machine is less as compared to a single-phase machine.";
+//   labels[2].innerHTML = "A three-phase machine does not require a starter.";
+//   labels[3].innerHTML =
+//     "Mechanical vibration in three-phase motors are more as copmared to single phase motors.";
+//   questionNumber.innerHTML = "Question 1 / 2";
+// };
 
 const setQuestionTwo = () => {
   question.innerHTML =
@@ -209,7 +209,7 @@ const showQuiz = () => {
   videoPlayer.pause();
   restAllMapButtons();
   loadingAnimation(quizOneIcon);
-  setQuestionone();
+  // setQuestionone();
   disabledButton(previous);
   enableButton(next);
   removeCheckedAnswer();
