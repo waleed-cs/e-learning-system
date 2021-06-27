@@ -651,7 +651,7 @@ form > div > input[type="radio"]:checked + label::after {
     bottom: 0px;
     height: max-content;
     width: max-content;
-    margin: 35rem auto 0;
+    margin: 38rem auto 0;
   }
   .pop_up {
     left: 0;
