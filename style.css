@@ -132,14 +132,44 @@ video {
 }
 .question1 {
   background-color: white;
+  height: 15vh;
   width: 60%;
   border-radius: 15px;
   padding: 30px;
   font-size: 18px;
-  margin: 2rem 1rem;
+  margin-top: 3rem;
+  margin-left: 4rem;
+  position: relative;
+  text-align: center;
 }
 .question1 > p {
   color: #60636a;
+  margin-top: 1rem;
+}
+.question1 > p::before {
+  content: "?";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #84c34e;
+  position: absolute;
+  left: -45px;
+  top: -21px;
+  color: white;
+  font-size: 65px;
+  text-align: center;
+}
+
+.question1 > p::after {
+  content: "";
+  border-bottom: 17px solid #84c34e;
+  border-left: 17px solid transparent;
+  border-right: 25px solid transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -3px;
+  top: 30px;
 }
 
 .answers {
@@ -159,29 +189,6 @@ video {
   font-size: 1rem;
 }
 
-.answers > form > div > label::before {
-  content: "";
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: white;
-  left: -30px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-form > div > input[type="radio"]:checked + label::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  position: absolute;
-  left: -21px;
-  top: 4px;
-  background-color: #75bb43;
-}
-
 .containerr {
   display: block;
   position: relative;
@@ -189,10 +196,6 @@ form > div > input[type="radio"]:checked + label::after {
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 18px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   margin-top: 30px;
 }
 
@@ -207,16 +210,12 @@ form > div > input[type="radio"]:checked + label::after {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: white;
   border-radius: 50%;
 }
 
-.containerr:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
 .containerr input:checked ~ .checkmark {
-  background-color: #75bb43;
+  background-color: white;
 }
 
 .checkmark:after {
@@ -230,12 +229,12 @@ form > div > input[type="radio"]:checked + label::after {
 }
 
 .containerr .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: white;
+  background: #84c34e;
 }
 
 .submit {
@@ -244,7 +243,7 @@ form > div > input[type="radio"]:checked + label::after {
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  margin-left: 1.5rem;
+  margin-left: 3.5rem;
 }
 
 .submit:hover {
@@ -280,6 +279,7 @@ form > div > input[type="radio"]:checked + label::after {
   width: max-content;
   margin-left: auto;
   margin-right: 1rem;
+  position: relative;
 }
 
 .inform::before {
@@ -291,6 +291,9 @@ form > div > input[type="radio"]:checked + label::after {
   color: white;
   text-align: center;
   font-size: 25px;
+  position: absolute;
+  left: -4.5%;
+  top: 34%;
 }
 
 .pop_up {
@@ -577,7 +580,7 @@ form > div > input[type="radio"]:checked + label::after {
 
 /* Responsive design */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
   }
@@ -708,7 +711,7 @@ form > div > input[type="radio"]:checked + label::after {
     width: 100%;
     margin: 0 auto;
   }
-}
+} */
 
 /* @media all and (max-width: 768px) {
   main {
