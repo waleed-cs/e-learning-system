@@ -118,6 +118,7 @@ ul li {
 video {
   cursor: pointer;
   width: 100%;
+  height: auto;
 }
 .video__player {
   width: 100%;
@@ -584,7 +585,6 @@ video {
   }
   .video__player {
     margin-top: 1rem;
-    height: max-content;
   }
 
   .continue {
