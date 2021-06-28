@@ -72,6 +72,7 @@ const welcomeIcon = document.querySelector(".welcome i");
 welcomeVideo.style.color = "#57B643";
 welcomeIcon.style.color = "#57B643";
 const welcome = () => {
+  fixedSize();
   restColors();
   restAllTags();
   restAllMapButtons();
@@ -88,6 +89,7 @@ const welcome = () => {
 const secondVideo = document.querySelector(".second p");
 const secondIcon = document.querySelector(".second i");
 const second = () => {
+  fixedSize();
   restColors();
   restAllTags();
   restAllMapButtons();
@@ -103,6 +105,7 @@ const second = () => {
 const thirdVideo = document.querySelector(".third p");
 const thirdIcon = document.querySelector(".third i");
 const third = () => {
+  fixedSize();
   restColors();
   restAllTags();
   restAllMapButtons();
@@ -263,11 +266,15 @@ submit.addEventListener("click", () => {
     "The main purpose of a generating plant substation is to ______________."
   ) {
     if (allOptions[0].checked) {
+      console.log(allOptions);
       overlay.style.display = "";
       popUp.style.display = "";
       header.innerHTML = "correct";
       header.style.color = "#9bce3b";
       message.innerHTML = "That’s correct!";
+      allOptions.forEach((item) => {
+        item.disabled = true;
+      });
     } else {
       header.innerHTML = "incorrect";
       header.style.color = "#E56262";
