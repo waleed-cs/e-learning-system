@@ -256,6 +256,9 @@ submit.addEventListener("click", () => {
     if (allOptions[0].checked) {
       overlay.style.display = "";
       popUp.style.display = "";
+      header.innerHTML = "correct";
+      header.style.color = "#9bce3b";
+      message.innerHTML = "That’s correct!";
     } else {
       header.innerHTML = "incorrect";
       header.style.color = "#E56262";
@@ -267,6 +270,9 @@ submit.addEventListener("click", () => {
     if (allOptions[2].checked) {
       overlay.style.display = "";
       popUp.style.display = "";
+      header.innerHTML = "correct";
+      header.style.color = "#9bce3b";
+      message.innerHTML = "That’s correct!";
     } else {
       header.innerHTML = "incorrect";
       header.style.color = "#E56262";
