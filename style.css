@@ -395,36 +395,34 @@ video {
 
 .map {
   background-color: #dedede;
-  height: 100vh;
+  height: 110vh;
   width: 72vw;
   position: relative;
+  overflow: auto;
 }
 
 .map .description {
   font-size: 18px;
-  position: absolute;
-  top: 2%;
-  left: 2%;
   width: 40%;
   color: #60636a;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .map svg {
-  max-width: 900px;
-  position: absolute;
-  left: 0;
-  top: 15%;
+  max-width: 800px;
+  margin-top: -12rem;
 }
 
 .choices {
   height: 25vh;
   width: 25vw;
-  position: absolute;
-  right: 1%;
-  top: 22.5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .choices > div {
@@ -543,17 +541,17 @@ video {
 }
 
 .info {
-  position: absolute;
+  position: relative;
   max-width: 400px;
   min-height: 10vh;
-  top: 1%;
-  right: 1%;
   background-color: white;
   padding: 2rem;
   border-radius: 20px;
   color: #009448;
   font-size: 1rem;
   text-align: left;
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
 .info::before {
@@ -579,6 +577,79 @@ video {
 }
 
 /* Responsive design */
+
+@media screen and (max-width: 768px) {
+  .lock {
+    display: none;
+  }
+  .videolist {
+    overflow: hidden;
+  }
+  main {
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
+    order: -50;
+    margin: 0;
+  }
+  .quiz1 {
+    width: 100%;
+  }
+  .question1 {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .inform {
+    width: 85%;
+    margin: 1rem;
+  }
+
+  .pop_up {
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-left: 12.5rem;
+    width: 70vw;
+  }
+
+  .map {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .map > svg {
+    width: 100%;
+    float: left;
+    object-fit: cover;
+    margin-top: 5rem;
+    max-width: 700px;
+  }
+
+  .choices {
+    float: left;
+    margin-left: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .map > .info {
+    left: 0;
+    bottom: 0px;
+    right: 0px;
+    top: 0px;
+    height: max-content;
+    width: 80vw;
+    margin: 3rem auto 1rem;
+  }
+  .map .description {
+    width: 100%;
+    margin: 1rem;
+  }
+}
 
 /* @media screen and (max-width: 768px) {
   main {
