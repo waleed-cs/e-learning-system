@@ -118,7 +118,6 @@ ul li {
 video {
   cursor: pointer;
   width: 100%;
-  object-fit: cover;
 }
 .video__player {
   width: 100%;
@@ -580,8 +579,12 @@ video {
 /* Responsive design */
 
 @media screen and (max-width: 768px) {
+  video {
+    object-fit: cover;
+  }
   .video__player {
     margin-top: 1rem;
+    height: max-content;
   }
 
   .continue {
