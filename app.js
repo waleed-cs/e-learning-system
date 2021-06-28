@@ -17,6 +17,15 @@ lockdiv.addEventListener("click", () => {
 
 const videoPlayer = document.querySelector(".video");
 
+//fix the resize issue when the src changes
+
+const fixedSize = () => {
+  videoPlayer.addEventListener("loadedmetadata", () => {
+    videoPlayer.width = videoPlayer.clientWidth;
+    videoPlayer.height = videoPlayer.clientHeight;
+  });
+};
+fixedSize();
 //show and hide the subsections
 const mainfolder = document.querySelector(".mainfolder");
 const subSections = document.querySelectorAll("li");
@@ -318,6 +327,8 @@ const continueButton = document.querySelector(".continue");
 const continueAction = () => {
   if ((videoPlayer.style.display = "none")) {
     videoPlayer.pause();
+  } else {
+    fixedSize();
   }
   for (let i = 0; i < subSections.length; i++) {
     if (subSections[i].children[1].style.color == "rgb(87, 182, 67)") {
