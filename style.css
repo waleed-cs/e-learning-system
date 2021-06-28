@@ -395,7 +395,7 @@ video {
 
 .map {
   background-color: #dedede;
-  height: 110vh;
+  min-height: 110vh;
   width: 72vw;
   position: relative;
   overflow: auto;
