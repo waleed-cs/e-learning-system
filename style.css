@@ -432,6 +432,7 @@ video {
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
+  z-index: 50;
 }
 .choices > div > p {
   margin-left: 1rem;
@@ -579,6 +580,14 @@ video {
 /* Responsive design */
 
 @media screen and (max-width: 768px) {
+  .video__player {
+    margin-top: 1rem;
+  }
+
+  .continue {
+    margin-bottom: 1rem;
+  }
+
   .lock {
     display: none;
   }
@@ -606,7 +615,12 @@ video {
 
   .inform {
     width: 85%;
-    margin: 1rem;
+    margin: 2rem;
+  }
+
+  .submit {
+    margin-left: 8rem;
+    margin-bottom: 2rem;
   }
 
   .pop_up {
@@ -650,286 +664,3 @@ video {
     margin: 1rem;
   }
 }
-
-/* @media screen and (max-width: 768px) {
-  main {
-    flex-direction: column;
-  }
-  .lock {
-    display: none;
-  }
-  .videolist {
-    overflow: hidden;
-  }
-  .content {
-    order: -50;
-  }
-
-  .quiz1 {
-    left: 0rem;
-    bottom: 0px;
-    top: 0.5rem;
-    width: 100%;
-    min-height: 170vh;
-  }
-
-  .question1 {
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-  }
-  .question1 > p {
-    position: relative;
-    top: 0rem;
-    left: 1rem;
-    font-size: 17px;
-  }
-
-  .question1 > p::before {
-    width: 75px;
-    height: 75px;
-    left: -110px;
-    top: -72px;
-  }
-
-  .question1 > p::after {
-    left: -60px;
-    top: -18px;
-  }
-
-  .answers {
-    left: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    margin: 11rem auto 20rem;
-    width: 100%;
-  }
-
-  .answers > form > div > label::before {
-    left: -25px;
-    top: -45%;
-    transform: translateY(0%);
-  }
-
-  .answers > form > div > label {
-    font-size: 1rem;
-    width: 100%;
-  }
-  form > div > input[type="radio"]:checked + label::after {
-    left: -6%;
-    top: 7%;
-  }
-
-  .inform {
-    bottom: 0px;
-    right: 0px;
-    top: 0px;
-    height: max-content;
-    margin-top: 45rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .submit {
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    height: max-content;
-    width: max-content;
-    margin: 38rem auto 0;
-  }
-  .pop_up {
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-left: 14rem;
-    width: 70vw;
-  }
-
-  .map {
-    left: 0;
-    width: 100%;
-    min-height: 150vh;
-  }
-
-  .choices {
-    left: 0;
-    grid-template-columns: 1fr;
-    margin-left: 2rem;
-    margin-top: 7rem;
-  }
-
-  .map > svg {
-    width: 100%;
-    object-fit: cover;
-    margin-top: 25rem;
-  }
-
-  .map > .info {
-    left: 0;
-    bottom: 0px;
-    right: 0px;
-    top: 0px;
-    height: max-content;
-    width: 80vw;
-    margin: 8rem auto 0;
-  }
-  .map .description {
-    width: 100%;
-    margin: 0 auto;
-  }
-} */
-
-/* @media all and (max-width: 768px) {
-  main {
-    display: block;
-    margin: 0 auto;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  header {
-    background-color: white;
-    width: 100%;
-  }
-
-  .video__player {
-    height: max-content;
-    margin-left: 0%;
-    width: 100%;
-    position: relative;
-    left: 0.5rem;
-  }
-
-  video {
-    display: block;
-    width: 95%;
-  }
-
-  .course_menu {
-    width: 100%;
-    position: relative;
-    margin-top: 20%;
-    order: 50;
-  }
-
-  .lock {
-    display: none;
-  }
-
-  .videolist {
-    overflow-y: hidden;
-  }
-
-  .line2 {
-    display: block;
-  }
-
-  .quiz1 {
-    left: 0rem;
-    bottom: 0px;
-    top: 0.5rem;
-    width: 100%;
-    min-height: 170vh;
-  }
-
-  .question1 {
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    left: 20%;
-  }
-  .question1 > p {
-    position: relative;
-    top: 0rem;
-    left: 1rem;
-    font-size: 17px;
-  }
-
-  .question1 > p::before {
-    width: 75px;
-    height: 75px;
-    left: -110px;
-    top: -72px;
-  }
-  .question1 > p::after {
-    left: -60px;
-    top: -18px;
-  }
-  .answers {
-    left: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    margin: 11rem auto 20rem;
-  }
-  .inform {
-    display: block;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0;
-    height: max-content;
-    width: 80%;
-    margin: 45rem auto 0;
-  }
-
-  .submit {
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    height: max-content;
-    width: max-content;
-    margin: 40rem auto 0;
-  }
-  .pop_up {
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-left: 11rem;
-    width: 70vw;
-  }
-  .map {
-    left: 0;
-    width: 100%;
-    min-height: 150vh;
-  }
-
-  .choices {
-    left: 0;
-    grid-template-columns: 1fr;
-    margin-left: 2rem;
-    margin-top: 7rem;
-  }
-
-  .map > svg {
-    width: 100%;
-    object-fit: cover;
-    margin-top: 25rem;
-  }
-
-  .map > .info {
-    left: 0;
-    bottom: 0px;
-    right: 0px;
-    top: 0px;
-    height: max-content;
-    width: 80vw;
-    margin: 8rem auto 0;
-  }
-  .map .description {
-    width: 100%;
-    margin: 0 auto;
-  }
-} */
