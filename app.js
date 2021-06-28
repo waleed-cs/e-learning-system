@@ -266,15 +266,11 @@ submit.addEventListener("click", () => {
     "The main purpose of a generating plant substation is to ______________."
   ) {
     if (allOptions[0].checked) {
-      console.log(allOptions);
       overlay.style.display = "";
       popUp.style.display = "";
       header.innerHTML = "correct";
       header.style.color = "#9bce3b";
       message.innerHTML = "That’s correct!";
-      allOptions.forEach((item) => {
-        item.disabled = true;
-      });
     } else {
       header.innerHTML = "incorrect";
       header.style.color = "#E56262";
