@@ -93,7 +93,7 @@ const second = () => {
   firstQuiz.style.display = "none";
   mapContainer.style.display = "none";
   videoPlayer.style.display = "";
-  videoPlayer.setAttribute("src", "./videos/2021, We Are Ready.mp4");
+  videoPlayer.setAttribute("src", "./videos/Our People, Our Heroes.mp4");
   secondVideo.style.color = "#57B643";
   secondIcon.style.color = "#57B643";
 };
