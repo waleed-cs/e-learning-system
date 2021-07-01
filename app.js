@@ -19,9 +19,10 @@ const videoPlayer = document.querySelector(".video");
 
 //fix the resize issue when the src changes
 
-videoPlayer.addEventListener("loadedmetadata", () => {
-  videoPlayer.width = videoPlayer.clientWidth;
-  videoPlayer.height = videoPlayer.clientHeight;
+videoPlayer.addEventListener("loadedmetadata", (e) => {
+  let player = e.target;
+  player.width = player.clientWidth;
+  player.height = player.clientHeight;
 });
 
 //show and hide the subsections
@@ -70,7 +71,6 @@ const welcomeIcon = document.querySelector(".welcome i");
 welcomeVideo.style.color = "#57B643";
 welcomeIcon.style.color = "#57B643";
 const welcome = () => {
-  fixedSize();
   restColors();
   restAllTags();
   restAllMapButtons();
@@ -87,7 +87,6 @@ const welcome = () => {
 const secondVideo = document.querySelector(".second p");
 const secondIcon = document.querySelector(".second i");
 const second = () => {
-  fixedSize();
   restColors();
   restAllTags();
   restAllMapButtons();
@@ -103,7 +102,6 @@ const second = () => {
 const thirdVideo = document.querySelector(".third p");
 const thirdIcon = document.querySelector(".third i");
 const third = () => {
-  fixedSize();
   restColors();
   restAllTags();
   restAllMapButtons();
@@ -328,8 +326,6 @@ const continueButton = document.querySelector(".continue");
 const continueAction = () => {
   if ((videoPlayer.style.display = "none")) {
     videoPlayer.pause();
-  } else {
-    fixedSize();
   }
   for (let i = 0; i < subSections.length; i++) {
     if (subSections[i].children[1].style.color == "rgb(87, 182, 67)") {
