@@ -16,7 +16,7 @@ lockdiv.addEventListener("click", () => {
 });
 
 const videoPlayer = document.querySelector(".video");
-
+videoPlayer.setAttribute("src", "./videos/2021, We Are Ready.mp4");
 //fix the resize issue when the src changes
 
 $("#video").on("loadedmetadata", function () {
