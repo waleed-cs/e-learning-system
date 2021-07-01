@@ -20,8 +20,8 @@ const videoPlayer = document.querySelector(".video");
 //fix the resize issue when the src changes
 
 videoPlayer.addEventListener("onloadeddata", () => {
-  videoPlayer.style.width = videoPlayer.videoWidth;
-  videoPlayer.style.height = videoPlayer.videoHeight;
+  videoPlayer.width = videoPlayer.clientWidth;
+  videoPlayer.height = videoPlayer.clientHeight;
 });
 
 //show and hide the subsections
