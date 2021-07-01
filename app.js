@@ -19,7 +19,7 @@ const videoPlayer = document.querySelector(".video");
 
 //fix the resize issue when the src changes
 
-videoPlayer.addEventListener("canplay", (e) => {
+videoPlayer.addEventListener("onloadeddata", (e) => {
   let player = e.target;
   player.width = player.clientWidth;
   player.height = player.clientHeight;
