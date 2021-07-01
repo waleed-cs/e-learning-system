@@ -19,13 +19,11 @@ const videoPlayer = document.querySelector(".video");
 
 //fix the resize issue when the src changes
 
-const fixedSize = () => {
-  videoPlayer.addEventListener("loadedmetadata", () => {
-    videoPlayer.width = videoPlayer.clientWidth;
-    videoPlayer.height = videoPlayer.clientHeight;
-  });
-};
-fixedSize();
+videoPlayer.addEventListener("loadedmetadata", () => {
+  videoPlayer.width = videoPlayer.clientWidth;
+  videoPlayer.height = videoPlayer.clientHeight;
+});
+
 //show and hide the subsections
 const mainfolder = document.querySelector(".mainfolder");
 const subSections = document.querySelectorAll("li");
