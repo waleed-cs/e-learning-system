@@ -19,7 +19,7 @@ const videoPlayer = document.querySelector(".video");
 
 //fix the resize issue when the src changes
 
-$(".video").on("loadedmetadata", function () {
+$("#video").on("loadedmetadata", function () {
   this.width = this.videoWidth;
   this.height = this.videoHeight;
 });
