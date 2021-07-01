@@ -38,6 +38,7 @@ main {
   margin: 1rem;
   display: block;
   height: 500px;
+  width: auto;
 }
 
 .course_menu h5 {
