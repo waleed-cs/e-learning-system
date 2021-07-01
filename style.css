@@ -115,11 +115,11 @@ ul li {
   margin-left: 3.2rem;
 }
 
-video {
+/* video {
   cursor: pointer;
   width: 100%;
   height: auto;
-}
+} */
 .video__player {
   width: 100%;
   height: auto;
