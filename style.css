@@ -38,7 +38,6 @@ main {
   margin: 1rem;
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 .course_menu h5 {
@@ -585,10 +584,6 @@ ul li {
   video {
     object-fit: cover;
   }
-  .video__player {
-    margin-top: 1rem;
-  }
-
   .continue {
     margin-bottom: 1rem;
   }

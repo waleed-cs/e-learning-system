@@ -16,15 +16,6 @@ lockdiv.addEventListener("click", () => {
 });
 
 const videoPlayer = document.querySelector(".video");
-videoPlayer.style.display = "none";
-videoPlayer.setAttribute("src", "./videos/2021, We Are Ready.mp4");
-videoPlayer.style.display = "";
-//fix the resize issue when the src changes
-
-// $("#video").on("loadedmetadata", function () {
-//   this.width = this.videoWidth;
-//   this.height = this.videoHeight;
-// });
 
 //show and hide the subsections
 const mainfolder = document.querySelector(".mainfolder");
