@@ -323,7 +323,12 @@ const continueAction = () => {
     if (subSections[i].children[1].style.color == "rgb(87, 182, 67)") {
       subSections[i].children[0].style.color = " black";
       subSections[i].children[1].style.color = " black";
-      loadingAnimation(subSections[i + 1].children[0]);
+      if ((videoPlayer.style.display = "none")) {
+        loadingAnimation(subSections[i + 1].children[0]);
+      } else {
+        loadingIconVideos(subSections[i + 1].children[0]);
+      }
+
       subSections[i + 1].children[0].style.color = " rgb(87, 182, 67)";
       subSections[i + 1].children[1].style.color = " rgb(87, 182, 67)";
       subSections[i + 1].click();
